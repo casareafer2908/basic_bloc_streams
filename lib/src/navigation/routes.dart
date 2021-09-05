@@ -1,7 +1,7 @@
-import 'package:basic_routes_navigation/src/ui/first_screen.dart';
-import 'package:basic_routes_navigation/src/ui/home_screen.dart';
-import 'package:basic_routes_navigation/src/ui/second_screen.dart';
-import 'package:basic_routes_navigation/src/ui/third_screen.dart';
+import 'package:basic_bloc_streams/src/ui/home_screen.dart';
+import 'package:basic_bloc_streams/src/ui/random_number_page.dart';
+import 'package:basic_bloc_streams/src/ui/second_screen.dart';
+import 'package:basic_bloc_streams/src/ui/third_screen.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -15,7 +15,7 @@ class Routes {
       case homePage:
         return _buildRoute(HomePage.create);
       case firstPage:
-        return _buildRoute(FirstPage.create);
+        return _buildRoute(RandomNumberPage.create);
       case secondPage:
         return _buildRoute(SecondPage.create);
       case thirdPage:

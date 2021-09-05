@@ -1,5 +1,5 @@
 import 'package:basic_routes_navigation/src/navigation/routes.dart';
-import 'package:basic_routes_navigation/src/ui/first_screen.dart';
+import 'package:basic_routes_navigation/src/ui/random_number_page.dart';
 import 'package:basic_routes_navigation/src/ui/home_screen.dart';
 import 'package:basic_routes_navigation/src/ui/second_screen.dart';
 import 'package:basic_routes_navigation/src/ui/third_screen.dart';
@@ -29,7 +29,7 @@ class MockFirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: (settings) => Routes.routes(settings),
-      home: const FirstPage(),
+      home: const RandomNumberPage(),
     );
   }
 }
@@ -92,7 +92,7 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('firstPage')));
       await tester.pumpAndSettle();
       //assert
-      expect(find.byType(FirstPage), findsOneWidget);
+      expect(find.byType(RandomNumberPage), findsOneWidget);
       await tester.tap(find.byKey(const ValueKey('back')));
       await tester.pumpAndSettle();
       expect(find.byType(HomePage), findsOneWidget);

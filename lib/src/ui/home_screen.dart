@@ -1,6 +1,6 @@
-import 'package:basic_routes_navigation/src/localization/locale_keys.g.dart';
+import 'package:basic_bloc_streams/src/localization/locale_keys.g.dart';
+import 'package:basic_bloc_streams/src/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:basic_routes_navigation/src/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'common_widgets/custom_elevated_button.dart';
 

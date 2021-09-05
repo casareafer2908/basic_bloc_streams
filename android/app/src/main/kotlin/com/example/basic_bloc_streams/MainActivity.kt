@@ -1,4 +1,4 @@
-package com.example.basic_routes_navigation
+package com.example.basic_bloc_streams
 
 import io.flutter.embedding.android.FlutterActivity
 

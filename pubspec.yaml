@@ -1,5 +1,5 @@
-name: basic_routes_navigation
-description: Basic Routes Navigation with Easy Localization project for reference.
+name: basic_bloc_streams
+description: Basic blocs and streams implementation for reference.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.basic_routes_navigation">
+    package="com.example.basic_bloc_streams">
    <application
-        android:label="Routes&amp;Localization"
+        android:label="basic_bloc_streams"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
