@@ -1,0 +1,10 @@
+{
+  "homepage": "Homepage",
+  "helloWorld": "Hello World!",
+  "homepageRoutesLabel": "Routes:",
+  "firstPage": "First Page",
+  "secondPage": "Second Page",
+  "thirdPage": "Third Page",
+  "timesPushedButton": "You've pushed the button this many times:",
+  "incrementTooltip": "Increment"
+}

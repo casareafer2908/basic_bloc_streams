@@ -1,0 +1,10 @@
+{
+  "homepage": "Página Principal",
+  "helloWorld": "Rutas",
+  "homepageRoutesLabel": "Rutas:",
+  "firstPage": "Primera Pagina",
+  "secondPage": "Segunda Pagina",
+  "thirdPage": "Tercera Pagina",
+  "timesPushedButton": "Has presionado el boton estas veces:",
+  "incrementTooltip": "Sumar"
+}
