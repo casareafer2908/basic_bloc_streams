@@ -2,6 +2,7 @@ import 'package:basic_bloc_streams/src/core/blocs/random_number_bloc.dart';
 import 'package:basic_bloc_streams/src/core/services/random_number_service.dart';
 import 'package:basic_bloc_streams/src/localization/locale_keys.g.dart';
 import 'package:basic_bloc_streams/src/ui/common_widgets/custom_elevated_button.dart';
+import 'package:basic_bloc_streams/src/ui/common_widgets/custom_information_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,10 +25,6 @@ class RandomNumberPage extends StatelessWidget {
 
   void _randomNumberService() => bloc.randomNumberService();
 
-  _back(BuildContext context) {
-    Navigator.pop(context);
-  }
-
   StreamBuilder<String> textLabel() {
     return StreamBuilder<String>(
         stream: bloc.labelTextStream,
@@ -41,6 +38,22 @@ class RandomNumberPage extends StatelessWidget {
               fontSize: 30,
               fontWeight: FontWeight.w600,
             ),
+          );
+        });
+  }
+
+  StreamBuilder<bool> imageEnabled() {
+    return StreamBuilder<bool>(
+        stream: bloc.imageIsEnabled,
+        initialData: false,
+        builder: (context, snapshot) {
+          bool? imageEnabled = snapshot.data;
+          return Visibility(
+            visible: imageEnabled!,
+            maintainState: true,
+            maintainAnimation: true,
+            maintainSize: true,
+            child: Image.asset('assets/images/geeksquad.jpg'),
           );
         });
   }
@@ -62,17 +75,40 @@ class RandomNumberPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      showDialog(
+        context: context,
+        builder: (context) => InformationDialog(
+            title: 'Info',
+            contentText: LocaleKeys.randomNumberServiceBrief.tr(),
+            onPressed: () => _back(context),
+            buttonText: 'yes'),
+      );
+    });
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          const Flexible(
+            child: FractionallySizedBox(
+              heightFactor: 0.5,
+            ),
+          ),
           Flexible(
-            child: const Text(
-              LocaleKeys.randomNumberServiceBrief,
-              textAlign: TextAlign.justify,
-            ).tr(),
+            child: FractionallySizedBox(
+              heightFactor: 0.5,
+              widthFactor: 0.8,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: imageEnabled(),
+                  ),
+                ],
+              ),
+            ),
           ),
           Flexible(
             child: FractionallySizedBox(
@@ -88,6 +124,12 @@ class RandomNumberPage extends StatelessWidget {
               ),
             ),
           ),
+          const Flexible(
+            child: FractionallySizedBox(
+              heightFactor: 0.5,
+              widthFactor: 0.8,
+            ),
+          ),
           CustomElevatedButton(
               child: const Text(LocaleKeys.generateRandomNumberButton).tr(),
               color: Colors.blue,
@@ -95,5 +137,9 @@ class RandomNumberPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  _back(BuildContext context) {
+    Navigator.pop(context);
   }
 }

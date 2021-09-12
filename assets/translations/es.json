@@ -8,8 +8,8 @@
   "thirdPage": "Tercera Pagina",
   "timesPushedButton": "Has presionado el boton estas veces:",
   "incrementTooltip": "Sumar",
-  "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es >= 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen ",
-  "numberUnderFive": "Imagen Habilitada! Tu numero fue:",
-  "numberOverFive": "Imagen Deshabilitada! Tu numero fue:",
+  "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es igual o menor que 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen ",
+  "numberOverFive": "Imagen Habilitada! Tu numero fue:",
+  "numberUnderFive": "Imagen Deshabilitada! Tu numero fue:",
   "generateRandomNumberButton": "Generar Numero"
 }

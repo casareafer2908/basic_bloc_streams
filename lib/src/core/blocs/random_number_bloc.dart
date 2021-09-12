@@ -8,22 +8,22 @@ class RandomNumberBloc {
 
   final RandomNumberServiceBase service;
 
-  // final StreamController<bool> _imageIsEnabledController =
-  //     StreamController<bool>.broadcast();
+  final StreamController<bool> _imageIsEnabledController =
+      StreamController<bool>.broadcast();
   final StreamController<String> _labelTextController =
       StreamController<String>.broadcast();
 
-  //Stream<bool> get imageIsEnabled => _imageIsEnabledController.stream;
+  Stream<bool> get imageIsEnabled => _imageIsEnabledController.stream;
 
   Stream<String> get labelTextStream => _labelTextController.stream;
 
-  // void _setImageIsEnabled(bool imageIsEnabled) =>
-  //     _imageIsEnabledController.add(imageIsEnabled);
+  void _setImageIsEnabled(bool imageIsEnabled) =>
+      _imageIsEnabledController.add(imageIsEnabled);
 
   setLabelText(String labelText) => _labelTextController.add(labelText);
 
   void dispose() {
-    //  _imageIsEnabledController.close();
+    _imageIsEnabledController.close();
     _labelTextController.close();
   }
 
@@ -31,11 +31,11 @@ class RandomNumberBloc {
 
   _responseHandler() {
     var serviceNumber = service.randomNumberService();
-    if (serviceNumber >= 5 ? false : true) {
-      //_setImageIsEnabled(true);
+    if (serviceNumber <= 5 ? false : true) {
+      _setImageIsEnabled(true);
       setLabelText('${LocaleKeys.numberOverFive.tr()} $serviceNumber');
     } else {
-      //_setImageIsEnabled(false);
+      _setImageIsEnabled(false);
       setLabelText('${LocaleKeys.numberUnderFive.tr()} $serviceNumber');
     }
   }

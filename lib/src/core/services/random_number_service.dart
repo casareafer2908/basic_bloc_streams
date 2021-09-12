@@ -12,6 +12,6 @@ class RandomNumberService implements RandomNumberServiceBase {
 
   int _responseGenerator() {
     Random randomNumberGenerator = Random();
-    return randomNumberGenerator.nextInt(10);
+    return randomNumberGenerator.nextInt(11);
   }
 }

@@ -8,8 +8,8 @@
   "thirdPage": "Third Page",
   "timesPushedButton": "You've pushed the button this many times:",
   "incrementTooltip": "Increment",
-  "randomNumberServiceBrief": "Push the button to get a random number from 0 to 10, if the number is < 5, an image will be displayed, otherwise no images will be shown",
-  "numberUnderFive": "Image enabled! your number was:",
-  "numberOverFive": "Image Disabled! your number was:",
+  "randomNumberServiceBrief": "Push the button to get a random number from 0 to 10, if the number is equal or under 5, an image will be displayed, otherwise no images will be shown",
+  "numberOverFive": "Image enabled! your number was:",
+  "numberUnderFive": "Image Disabled! your number was:",
   "generateRandomNumberButton": "Get Random Number"
 }
