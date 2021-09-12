@@ -10,5 +10,6 @@ abstract class  LocaleKeys {
   static const thirdPage = 'thirdPage';
   static const timesPushedButton = 'timesPushedButton';
   static const incrementTooltip = 'incrementTooltip';
+  static const randomNumberServiceBrief = 'randomNumberServiceBrief';
 
 }

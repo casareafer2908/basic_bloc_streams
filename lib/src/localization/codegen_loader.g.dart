@@ -23,7 +23,8 @@ class CodegenLoader extends AssetLoader{
   "secondPage": "Second Page",
   "thirdPage": "Third Page",
   "timesPushedButton": "You've pushed the button this many times:",
-  "incrementTooltip": "Increment"
+  "incrementTooltip": "Increment",
+  "randomNumberServiceBrief": "Push the button to get a random number from 0 to 10, if the number is >= 5, an image will be displayed, otherwise no images will be shown"
 };
 static const Map<String,dynamic> es = {
   "homepage": "Página Principal",
@@ -34,7 +35,8 @@ static const Map<String,dynamic> es = {
   "secondPage": "Segunda Pagina",
   "thirdPage": "Tercera Pagina",
   "timesPushedButton": "Has presionado el boton estas veces:",
-  "incrementTooltip": "Sumar"
+  "incrementTooltip": "Sumar",
+  "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es >= 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen "
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "es": es};
 }

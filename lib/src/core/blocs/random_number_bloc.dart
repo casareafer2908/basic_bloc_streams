@@ -26,7 +26,7 @@ class RandomNumberBloc {
     _labelTextController.close();
   }
 
-  service1() => _responseHandler();
+  randomNumberService() => _responseHandler();
 
   _responseHandler() {
     var serviceNumber = service.randomNumberService();

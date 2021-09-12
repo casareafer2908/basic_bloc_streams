@@ -7,5 +7,6 @@
   "secondPage": "Segunda Pagina",
   "thirdPage": "Tercera Pagina",
   "timesPushedButton": "Has presionado el boton estas veces:",
-  "incrementTooltip": "Sumar"
+  "incrementTooltip": "Sumar",
+  "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es >= 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen "
 }
