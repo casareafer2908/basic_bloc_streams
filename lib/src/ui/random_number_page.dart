@@ -28,15 +28,17 @@ class RandomNumberPage extends StatelessWidget {
   StreamBuilder<String> textLabel() {
     return StreamBuilder<String>(
         stream: bloc.labelTextStream,
-        initialData: 'Push the button',
+        initialData: LocaleKeys.pushTheButton.tr(),
         builder: (context, snapshot) {
           String _labelText = snapshot.data!;
-          return Text(
-            _labelText,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w600,
+          return Center(
+            child: Text(
+              _labelText,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           );
         });
@@ -79,10 +81,8 @@ class RandomNumberPage extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => InformationDialog(
-            title: 'Info',
-            contentText: LocaleKeys.randomNumberServiceBrief.tr(),
-            onPressed: () => _back(context),
-            buttonText: 'yes'),
+          contentText: LocaleKeys.randomNumberServiceBrief.tr(),
+        ),
       );
     });
     return Padding(
@@ -90,15 +90,10 @@ class RandomNumberPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Flexible(
-            child: FractionallySizedBox(
-              heightFactor: 0.5,
-            ),
-          ),
+        children: <Widget>[
           Flexible(
             child: FractionallySizedBox(
-              heightFactor: 0.5,
+              heightFactor: 1,
               widthFactor: 0.8,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -112,10 +107,9 @@ class RandomNumberPage extends StatelessWidget {
           ),
           Flexible(
             child: FractionallySizedBox(
-              heightFactor: 0.5,
+              heightFactor: 0.4,
               widthFactor: 0.8,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Flexible(
                     child: textLabel(),
@@ -124,12 +118,7 @@ class RandomNumberPage extends StatelessWidget {
               ),
             ),
           ),
-          const Flexible(
-            child: FractionallySizedBox(
-              heightFactor: 0.5,
-              widthFactor: 0.8,
-            ),
-          ),
+          const SizedBox(height: 10),
           CustomElevatedButton(
               child: const Text(LocaleKeys.generateRandomNumberButton).tr(),
               color: Colors.blue,

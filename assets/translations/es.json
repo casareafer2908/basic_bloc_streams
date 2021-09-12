@@ -9,7 +9,10 @@
   "timesPushedButton": "Has presionado el boton estas veces:",
   "incrementTooltip": "Sumar",
   "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es igual o menor que 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen ",
-  "numberOverFive": "Imagen Habilitada! Tu numero fue:",
-  "numberUnderFive": "Imagen Deshabilitada! Tu numero fue:",
-  "generateRandomNumberButton": "Generar Numero"
+  "numberOverFive": "Imagen Habilitada!\n Tu numero fue:",
+  "numberUnderFive": "Imagen Deshabilitada!\n Tu numero fue:",
+  "generateRandomNumberButton": "Generar Numero",
+  "info": "Info",
+  "ok": "OK",
+  "pushTheButton": "Presione el boton"
 }
