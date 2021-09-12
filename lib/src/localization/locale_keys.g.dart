@@ -5,6 +5,7 @@ abstract class  LocaleKeys {
   static const helloWorld = 'helloWorld';
   static const homepageRoutesLabel = 'homepageRoutesLabel';
   static const firstPage = 'firstPage';
+  static const randomNumberPageTitle = 'randomNumberPageTitle';
   static const secondPage = 'secondPage';
   static const thirdPage = 'thirdPage';
   static const timesPushedButton = 'timesPushedButton';

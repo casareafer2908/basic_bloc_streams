@@ -38,9 +38,10 @@ class HomePage extends StatelessWidget {
             height: 40,
           ),
           CustomElevatedButton(
-            key: const ValueKey('firstPage'),
-            onPressed: () => Navigator.pushNamed(context, Routes.firstPage),
-            child: const Text(LocaleKeys.firstPage).tr(),
+            key: const ValueKey('randomNumberPage'),
+            onPressed: () =>
+                Navigator.pushNamed(context, Routes.randomNumberPage),
+            child: const Text(LocaleKeys.randomNumberPageTitle).tr(),
             color: Colors.blue,
           ),
           const SizedBox(

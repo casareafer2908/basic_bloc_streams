@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class Routes {
   static const homePage = '/';
-  static const firstPage = '/firstPage';
+  static const randomNumberPage = '/randomNumberPage';
   static const secondPage = '/secondPage';
   static const thirdPage = '/thirdPage';
 
@@ -14,7 +14,7 @@ class Routes {
     switch (routeSettings.name) {
       case homePage:
         return _buildRoute(HomePage.create);
-      case firstPage:
+      case randomNumberPage:
         return _buildRoute(RandomNumberPage.create);
       case secondPage:
         return _buildRoute(SecondPage.create);

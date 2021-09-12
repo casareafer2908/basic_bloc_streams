@@ -1,8 +1,7 @@
-import 'package:basic_routes_navigation/src/navigation/routes.dart';
-import 'package:basic_routes_navigation/src/ui/random_number_page.dart';
-import 'package:basic_routes_navigation/src/ui/home_screen.dart';
-import 'package:basic_routes_navigation/src/ui/second_screen.dart';
-import 'package:basic_routes_navigation/src/ui/third_screen.dart';
+
+import 'package:basic_bloc_streams/src/navigation/routes.dart';
+import 'package:basic_bloc_streams/src/ui/home_screen.dart';
+import 'package:basic_bloc_streams/src/ui/random_number_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';

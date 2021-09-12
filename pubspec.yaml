@@ -16,6 +16,8 @@ dependencies:
   easy_localization: ^3.0.0
   #https://pub.dev/packages/easy_localization_loader
   easy_localization_loader: ^1.0.0
+  #https://pub.dev/packages/provider
+  provider: ^6.0.0
 
 
 dev_dependencies:
