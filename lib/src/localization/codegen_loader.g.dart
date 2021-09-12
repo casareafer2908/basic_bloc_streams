@@ -24,7 +24,10 @@ class CodegenLoader extends AssetLoader{
   "thirdPage": "Third Page",
   "timesPushedButton": "You've pushed the button this many times:",
   "incrementTooltip": "Increment",
-  "randomNumberServiceBrief": "Push the button to get a random number from 0 to 10, if the number is >= 5, an image will be displayed, otherwise no images will be shown"
+  "randomNumberServiceBrief": "Push the button to get a random number from 0 to 10, if the number is < 5, an image will be displayed, otherwise no images will be shown",
+  "numberUnderFive": "Image enabled! your number was:",
+  "numberOverFive": "Image Disabled! your number was:",
+  "generateRandomNumberButton": "Get Random Number"
 };
 static const Map<String,dynamic> es = {
   "homepage": "Página Principal",
@@ -36,7 +39,10 @@ static const Map<String,dynamic> es = {
   "thirdPage": "Tercera Pagina",
   "timesPushedButton": "Has presionado el boton estas veces:",
   "incrementTooltip": "Sumar",
-  "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es >= 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen "
+  "randomNumberServiceBrief": "Presiona el boton para generar un numero aleatorio entre 0 y 10, si el numero es >= 5, una imagen aparecera, de lo contrario no se mostrara ninguna imagen ",
+  "numberUnderFive": "Imagen Habilitada! Tu numero fue:",
+  "numberOverFive": "Imagen Deshabilitada! Tu numero fue:",
+  "generateRandomNumberButton": "Generar Numero"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "es": es};
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:basic_bloc_streams/src/core/services/random_number_service.dart';
+import 'package:basic_bloc_streams/src/localization/locale_keys.g.dart';
 
 class RandomNumberBloc {
   RandomNumberBloc({required this.service});
@@ -32,10 +33,10 @@ class RandomNumberBloc {
     var serviceNumber = service.randomNumberService();
     if (serviceNumber >= 5 ? false : true) {
       //_setImageIsEnabled(true);
-      setLabelText('Congrats! service enabled ~ Lucky Number $serviceNumber');
+      setLabelText('${LocaleKeys.numberOverFive.tr()} $serviceNumber');
     } else {
       //_setImageIsEnabled(false);
-      setLabelText('Service disabled ~ Unlucky Number $serviceNumber');
+      setLabelText('${LocaleKeys.numberUnderFive.tr()} $serviceNumber');
     }
   }
 }

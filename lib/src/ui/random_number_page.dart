@@ -68,25 +68,28 @@ class RandomNumberPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Row(
-            children: [
-              Flexible(
-                child: const Text(
-                  LocaleKeys.randomNumberServiceBrief,
-                  textAlign: TextAlign.justify,
-                ).tr(),
-              )
-            ],
+          Flexible(
+            child: const Text(
+              LocaleKeys.randomNumberServiceBrief,
+              textAlign: TextAlign.justify,
+            ).tr(),
           ),
-          const SizedBox(
-            height: 100,
-          ),
-          textLabel(),
-          const SizedBox(
-            height: 40,
+          Flexible(
+            child: FractionallySizedBox(
+              heightFactor: 0.5,
+              widthFactor: 0.8,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: textLabel(),
+                  ),
+                ],
+              ),
+            ),
           ),
           CustomElevatedButton(
-              child: const Text('service button'),
+              child: const Text(LocaleKeys.generateRandomNumberButton).tr(),
               color: Colors.blue,
               onPressed: _randomNumberService)
         ],

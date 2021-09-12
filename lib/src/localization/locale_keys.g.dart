@@ -11,5 +11,8 @@ abstract class  LocaleKeys {
   static const timesPushedButton = 'timesPushedButton';
   static const incrementTooltip = 'incrementTooltip';
   static const randomNumberServiceBrief = 'randomNumberServiceBrief';
+  static const numberUnderFive = 'numberUnderFive';
+  static const numberOverFive = 'numberOverFive';
+  static const generateRandomNumberButton = 'generateRandomNumberButton';
 
 }
