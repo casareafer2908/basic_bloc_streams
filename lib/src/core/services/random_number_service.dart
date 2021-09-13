@@ -5,6 +5,8 @@ abstract class RandomNumberServiceBase {
 }
 
 class RandomNumberService implements RandomNumberServiceBase {
+  int value = 0;
+
   @override
   int randomNumberService() {
     return _responseGenerator();
@@ -12,6 +14,7 @@ class RandomNumberService implements RandomNumberServiceBase {
 
   int _responseGenerator() {
     Random randomNumberGenerator = Random();
-    return randomNumberGenerator.nextInt(11);
+    value = randomNumberGenerator.nextInt(11);
+    return value;
   }
 }
