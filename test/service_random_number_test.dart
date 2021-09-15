@@ -10,7 +10,7 @@ void main() {
     //assert
     expect(randomNumberService.value is int, true);
   });
-  test('Random Number Service returns an interger >= 0 && >= 10', () {
+  test('Random Number Service returns an integer >= 0 && >= 10', () {
     //arrange
     final randomNumberService = RandomNumberService();
     //act
