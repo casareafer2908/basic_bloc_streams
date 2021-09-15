@@ -77,15 +77,22 @@ class RandomNumberPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
-    //TODO: fix information dialog
-    // WidgetsBinding.instance?.addPostFrameCallback((_) {
-    //   showDialog(
-    //     context: context,
-    //     builder: (context) => InformationDialog(
-    //       contentText: LocaleKeys.randomNumberServiceBrief.tr(),
-    //     ),
-    //   );
-    // });
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      final snackBar = SnackBar(
+        content: const Text('Random Number Page'),
+        action: SnackBarAction(
+          label: 'More Info',
+          onPressed: () => showDialog(
+            context: context,
+            builder: (context) => InformationDialog(
+              contentText: LocaleKeys.randomNumberServiceBrief.tr(),
+            ),
+          ),
+        ),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    });
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
