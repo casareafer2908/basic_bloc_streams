@@ -77,14 +77,15 @@ class RandomNumberPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
-      showDialog(
-        context: context,
-        builder: (context) => InformationDialog(
-          contentText: LocaleKeys.randomNumberServiceBrief.tr(),
-        ),
-      );
-    });
+    //TODO: fix information dialog
+    // WidgetsBinding.instance?.addPostFrameCallback((_) {
+    //   showDialog(
+    //     context: context,
+    //     builder: (context) => InformationDialog(
+    //       contentText: LocaleKeys.randomNumberServiceBrief.tr(),
+    //     ),
+    //   );
+    // });
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(

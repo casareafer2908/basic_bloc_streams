@@ -13,6 +13,7 @@ class InformationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      key: const ValueKey('infoOkButton'),
       title: const Text(
         LocaleKeys.info,
         style: TextStyle(
