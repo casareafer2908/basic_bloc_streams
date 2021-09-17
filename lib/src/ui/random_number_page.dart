@@ -74,6 +74,7 @@ class RandomNumberPage extends StatelessWidget {
           Padding(
               padding: const EdgeInsets.only(right: 20.0),
               child: GestureDetector(
+                key: const ValueKey('randomPageInfoAppBarButton'),
                 onTap: () => showDialog(
                   context: context,
                   builder: (context) => InformationDialog(

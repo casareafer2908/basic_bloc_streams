@@ -94,7 +94,7 @@ void main() {
     });
 
     testWidgets(
-        'Tap on Button RandomNumberPage triggers navigation to RandomNumberPage and then back button back to home',
+        'Tap on RandomNumberPage button triggers navigation to RandomNumberPage and then the back button tap triggers navigation to home page',
         (WidgetTester tester) async {
       //act
       await tester.pumpWidget(Provider<RandomNumberServiceBase>(
@@ -110,7 +110,7 @@ void main() {
     });
 
     testWidgets(
-        'Button Second Page tap triggers navigation to Second Page and back button back to home',
+        'Tap on SecondPageButton triggers navigation to Second Page and then tap on the back button triggers navigation to homepage',
         (WidgetTester tester) async {
       //act
       await tester.pumpWidget(const MockHomePage());
@@ -124,7 +124,7 @@ void main() {
     });
 
     testWidgets(
-        'Button Second Page tap triggers navigation to Second Page and back button back to home',
+        'Tap on ThirdPageButton triggers navigation to third Page and then tap on the back button triggers navigation to homepage',
         (WidgetTester tester) async {
       //act
       await tester.pumpWidget(const MockHomePage());
@@ -138,13 +138,43 @@ void main() {
     });
   });
 
-  group('FirstPage tests', () {
-    testWidgets('Button back is present in the first screen',
+  group('RandomNumberPage tests', () {
+    testWidgets('Button back is present in the RandomNumberPage screen',
         (WidgetTester tester) async {
       //act
       await tester.pumpWidget(const MockRandomNumberPage());
       //assert
       expect(find.byKey(const ValueKey('back')), findsOneWidget);
+    });
+    testWidgets('Button Information is present in the RandomNumberPage screen',
+        (WidgetTester tester) async {
+      //act
+      await tester.pumpWidget(const MockRandomNumberPage());
+      //assert
+      expect(find.byKey(const ValueKey('randomPageInfoAppBarButton')),
+          findsOneWidget);
+    });
+
+    testWidgets(
+        'Tap on Button Information displays an information dialog, tap on the OK button pops the information dialog',
+        (WidgetTester tester) async {
+      //act
+      await tester.pumpWidget(const MockRandomNumberPage());
+      //assert
+      expect(find.byKey(const ValueKey('randomPageInfoAppBarButton')),
+          findsOneWidget);
+      //press on the info button
+      await tester
+          .tap(find.byKey(const ValueKey('randomPageInfoAppBarButton')));
+      await tester.pumpAndSettle();
+      //info dialog shows up
+      expect(find.byType(InformationDialog), findsOneWidget);
+      expect(find.byKey(const ValueKey('infoOkButton')), findsOneWidget);
+      //press ok in the info dialog
+      await tester.tap(find.byKey(const ValueKey('infoOkButton')));
+      await tester.pumpAndSettle();
+      //info dialog pops out
+      expect(find.byType(InformationDialog), findsNothing);
     });
   });
   group('SecondPage tests', () {

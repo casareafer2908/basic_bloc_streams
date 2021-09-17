@@ -13,7 +13,6 @@ class InformationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      key: const ValueKey('infoOkButton'),
       title: const Text(
         LocaleKeys.info,
         style: TextStyle(
@@ -28,6 +27,7 @@ class InformationDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         TextButton(
+          key: const ValueKey('infoOkButton'),
           onPressed: () => Navigator.pop(context),
           child: const Text(
             LocaleKeys.ok,
