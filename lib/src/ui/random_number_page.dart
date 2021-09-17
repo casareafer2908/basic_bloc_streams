@@ -3,6 +3,7 @@ import 'package:basic_bloc_streams/src/core/services/random_number_service.dart'
 import 'package:basic_bloc_streams/src/localization/locale_keys.g.dart';
 import 'package:basic_bloc_streams/src/ui/common_widgets/custom_elevated_button.dart';
 import 'package:basic_bloc_streams/src/ui/common_widgets/custom_information_dialog.dart';
+import 'package:basic_bloc_streams/src/ui/common_widgets/custom_snackbar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -78,19 +79,7 @@ class RandomNumberPage extends StatelessWidget {
 
   Widget _buildBody(BuildContext context) {
     WidgetsBinding.instance?.addPostFrameCallback((_) {
-      final snackBar = SnackBar(
-        content: const Text('Random Number Page'),
-        action: SnackBarAction(
-          label: 'More Info',
-          onPressed: () => showDialog(
-            context: context,
-            builder: (context) => InformationDialog(
-              contentText: LocaleKeys.randomNumberServiceBrief.tr(),
-            ),
-          ),
-        ),
-      );
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      CustomWidgets.buildRandomNumberPageSnackbar(context);
     });
 
     return Padding(

@@ -104,10 +104,6 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('randomNumberPage')));
       await tester.pumpAndSettle();
       //assert
-      //TODO: fix information dialog
-      // expect(find.byType(InformationDialog), findsOneWidget);
-      // await tester.tap(find.byKey(const ValueKey('infoOkButton')));
-      // await tester.pumpAndSettle();
       await tester.tap(find.byKey(const ValueKey('back')));
       await tester.pumpAndSettle();
       expect(find.byType(HomePage), findsOneWidget);
