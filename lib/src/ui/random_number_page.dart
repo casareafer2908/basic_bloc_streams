@@ -3,7 +3,6 @@ import 'package:basic_bloc_streams/src/core/services/random_number_service.dart'
 import 'package:basic_bloc_streams/src/localization/locale_keys.g.dart';
 import 'package:basic_bloc_streams/src/ui/common_widgets/custom_elevated_button.dart';
 import 'package:basic_bloc_streams/src/ui/common_widgets/custom_information_dialog.dart';
-import 'package:basic_bloc_streams/src/ui/common_widgets/custom_snackbar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -71,6 +70,19 @@ class RandomNumberPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back),
           onPressed: () => _back(context),
         ),
+        actions: <Widget>[
+          Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () => showDialog(
+                  context: context,
+                  builder: (context) => InformationDialog(
+                    contentText: LocaleKeys.randomNumberServiceBrief.tr(),
+                  ),
+                ),
+                child: const Icon(Icons.info),
+              )),
+        ],
         title: const Text(LocaleKeys.randomNumberPageTitle).tr(),
       ),
       body: _buildBody(context),
@@ -78,10 +90,6 @@ class RandomNumberPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
-      CustomWidgets.buildRandomNumberPageSnackbar(context);
-    });
-
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(

@@ -23,28 +23,3 @@ class CustomWidgets {
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-//
-// class CustomSnackbar extends StatelessWidget {
-//   const CustomSnackbar(
-//       {Key? key,
-//       required this.onPressed,
-//       required this.contentText,
-//       required this.buttonText})
-//       : super(key: key);
-//   final VoidCallback onPressed;
-//   final String contentText;
-//   final String buttonText;
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return SnackBar(
-//       content: Text(contentText),
-//       action: SnackBarAction(
-//         label: buttonText,
-//         onPressed: onPressed,
-//       ),
-//     );
-//   }
-// }
